@@ -36,28 +36,28 @@
   <gap:plugin name="org.apache.cordova.network-information"/>
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <gap:plugin name="org.apache.cordova.vibration"/>
-  <!--<icon src="icon.png"/>-->
+  <!--<icon src="ocean-waves-icon.png"/>-->
 
   
   
-  <icon src="res/ios/icon.png" />
-    <icon src="res/ios/icon.png" platform="ios" width="57" height="57" density="mdpi" />  
-    <icon src="res/ios/icon.png"            gap:platform="ios"        width="57" height="57" />
-    <icon src="res/ios/icon.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="res/ios/icon.png"            gap:platform="ios"        width="72" height="72" />
-    <icon src="res/ios/icon.png"         gap:platform="ios"        width="144" height="144" />
-    <icon src="res/ios/icon.png"   gap:platform="android"    gap:qualifier="ldpi" />
-    <icon src="res/ios/icon.png"   gap:platform="android"    gap:qualifier="mdpi" />
-    <icon src="res/ios/icon.png"   gap:platform="android"    gap:qualifier="hdpi" />
-    <icon src="res/ios/icon.png"  gap:platform="android"    gap:qualifier="xhdpi" />
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/ios/icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/ios/icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/ios/icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/ios/icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/ios/icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/ios/icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/ios/icon.png" />
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/ios/icon.png" />
+  <icon src="res/ios/ocean-waves-icon.png" />
+    <icon src="res/ios/ocean-waves-icon.png" platform="ios" width="57" height="57" density="mdpi" />  
+    <icon src="res/ios/ocean-waves-icon.png"            gap:platform="ios"        width="57" height="57" />
+    <icon src="res/ios/ocean-waves-icon.png"         gap:platform="ios"        width="114" height="114" />
+    <icon src="res/ios/ocean-waves-icon.png"            gap:platform="ios"        width="72" height="72" />
+    <icon src="res/ios/ocean-waves-icon.png"         gap:platform="ios"        width="144" height="144" />
+    <icon src="res/ios/ocean-waves-icon.png"   gap:platform="android"    gap:qualifier="ldpi" />
+    <icon src="res/ios/ocean-waves-icon.png"   gap:platform="android"    gap:qualifier="mdpi" />
+    <icon src="res/ios/ocean-waves-icon.png"   gap:platform="android"    gap:qualifier="hdpi" />
+    <icon src="res/ios/ocean-waves-icon.png"  gap:platform="android"    gap:qualifier="xhdpi" />
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/ios/ocean-waves-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/ios/ocean-waves-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/ios/ocean-waves-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/ios/ocean-waves-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/ios/ocean-waves-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/ios/ocean-waves-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/ios/ocean-waves-icon.png" />
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/ios/ocean-waves-icon.png" />
   
 
 
