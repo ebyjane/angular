@@ -1,0 +1,73 @@
+<link href="assets/css/workExperience.css" rel="stylesheet" type="text/css">
+
+
+    <div class="select_companies" id="holder">
+        <form>
+
+            <div class="select_companies_head">
+                <div class="col-xs-12 col-sm-12 col-md-12 select_companies_inner">
+                    <span class="back_arow"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                    <span>Companies found for you<a href="#"><img id="close" alt="close" src="assets/images/close.png"/></a></span>
+                </div>
+            </div>
+
+            <div id="test">
+                <div class="col-md-12 col-padd">
+                    <div class="panel panel-default">
+                        <div class="panel-heading contain_head">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#tab1default" data-toggle="tab">Latest</a></li>
+                                <li><a href="#tab2default" data-toggle="tab">People</a></li>
+                                <li><a href="#tab3default" data-toggle="tab">Est</a></li>
+                            </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tab1default">
+
+                                    <div ng-repeat="val in companylist" class="company_details" ng-init="img = {}">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-padd">
+                                            <div class="col-xs-4 col-sm-4 col-md-4 col-padd" ng-init="path =remove_at(img_path+val.tj_emp_logo)">
+                                                <div><img id="close" src="{{path}}" ng-init="img[$index] = imageExists(path, img, $index)" ng-show="img[$index]" height="80" width="80"/>
+												<img src="assets/images/empty.jpg" ng-show="!img[$index]" height="80" width="80"></div>
+                                            </div>
+                                            <div class="col-xs-8 col-sm-8 col-md-8 col-padd">
+                                                <h5>{{val.tj_emp_company_name}}</h5>
+                                                <ul>
+                                                    <li  ng-show="!val.tj_emp_established_year.length"><span><img  alt="close" src="assets/images/01.png"/></span>Established: Not mentioned</li>
+													<li ng-show="val.tj_emp_established_year.length"> <span><img  alt="close" src="assets/images/01.png"/></span>Established: {{val.tj_emp_established_year }}</li>
+                                                    <li  ng-show="!val.tj_emp_total_employees.length"><span><img  alt="close" src="assets/images/02.png"/></span>People: Not mentioned</li>
+													 <li  ng-show="val.tj_emp_total_employees.length"><span><img  alt="close" src="assets/images/02.png"/></span>People: {{val.tj_emp_total_employees}}</li>
+                                                    <li><span><img  alt="close" src="assets/images/03.png"/></span>Jobs: 0</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="share_icon">
+                                            <ul>
+                                                <li>
+                                                    <a href="#"><img alt="close" src="assets/images/star.png" /></a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"><img alt="close" src="assets/images/share.png" /></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+									<h3 align="center" class="error" style="color:#cc0000;">{{error}}</h3>
+								
+                                </div>
+                                <div class="tab-pane fade" id="tab2default">Default 2</div>
+                                <div class="tab-pane fade" id="tab3default">Default 3</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="save" ng-init="buuton_disable=false">
+<button type="button" class="btn btn-lg btn-block save2">More Companies >></button>
+</div>
+        </form>
+    </div>
+
+

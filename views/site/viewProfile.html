@@ -1,0 +1,354 @@
+
+
+<div id="page-content">
+   <div class="menu-overlay"></div>
+   <ul class="menu">
+      <site-menu></site-menu>
+   </ul>
+   <div class="my_profile" id="holder">
+      <form>
+         <div class="my_profile_head">
+            <div class="col-xs-12 col-sm-12 col-md-12 my_profile_inner">
+               <span id="menu-toggle" class="header-item">
+               <a class="link-btn side-nav-btn menu-icon">
+               <i class="fa fa-bars" id="setdecoration" aria-hidden="true"></i>
+               </a>
+               </span>
+               <span>My Profile<a href="" ng-click="closepage()"><i class="fa fa-times-circle-o" aria-hidden="true" id="close"></i></a></span>
+            </div>
+         </div>
+         <div id="test">
+            <div class="edit_profile">
+               <div class="col-xs-4 col-sm-4 col-md-4 col-padd">
+                  <a href="#/site/updatePhoto">
+                     <div class="profile_container">
+                        <img alt="close" class="prifile_img" onerror="this.src='https://takeajob.s3.amazonaws.com/assets/images/avatar_1443611520.png'" ng-src="{{userDetails.profilePhoto}}"/>
+                        <div class="input-group">
+                           <div class="input-group-btn">
+                              <div class="upload_bt">
+                                 <div class="pencil_size"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                              </div>
+                              <!-- rename it --> 
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+               <div class="col-xs-8 col-sm-8 col-md-8 details-p">
+                  <div class="pencil_size"><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                  <p>{{userDetails.userName}}</p>
+                  <p>{{userDetails.userDesignation}}</p>
+                  <p><span><i class="fa fa-map-marker" aria-hidden="true"></i></span>{{userDetails.userLocation}}</p>
+                  <p><span><i class="fa fa-briefcase bag_icon" aria-hidden="true"></i></span>{{userDetails.experience}}</p>
+                  <p><span><i class="fa fa-inr" aria-hidden="true"></i></span>{{userDetails.userSalary}}</p>
+               </div>
+               <div class="clr"></div>
+               <div class="details-p">
+                  <div class="text_feed">
+                     <p>Contact Details<span class="pencil_size_second" onclick="window.location.href='#/site/contactDetails'"> <i class="fa fa-pencil" aria-hidden="true"></i></span></p>
+                  </div>
+                  <div class="clr"></div>
+                  <div class="p_tag">
+                     <div class="col-xs-7 col-sm-7 col-md-7 col-padd">
+                        <p><span><i class="fa fa-envelope" aria-hidden="true"></i></span>{{userDetails.emial}}</p>
+                     </div>
+                     <div class="col-xs-5 col-sm-5 col-md-5 verified col-padd">
+                       {{(userDetails.emailVerify == 1)?'Verified':'Not Verified'}}
+                     </div>
+                  </div>
+                  <div class="col-xs-7 col-sm-7 col-md-7 col-padd">
+                     <p><span><i class="fa fa-phone" aria-hidden="true"></i></span>{{userDetails.phone}}</p>
+                  </div>
+                  <div class="col-xs-5 col-sm-5 col-md-5 verified col-padd">
+                    {{(userDetails.phoneVerify == 1)?'Verified':'Not Verified'}}
+                  </div>
+               </div>
+            </div>
+            <div class="contain_head">
+               <label class="firstNameLabel">Resume Headline<span ng-click="resumeheading()" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></label>
+               <p class="langstyle">{{userDetails.resumeHeadline}}</p>
+            </div>
+            <div class="container-fluid">
+               <label class="firstNameLabel">Profile Summary<span onclick="window.location.href='#/summary/profilesummary'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></label>
+               <div class="form-group">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 add_btn">
+                        <button ng-if="userDetails.summaryContent.length < 1" onclick="window.location.href='#/summary/profilesummary'" type="button" class="btn btn-lg btn-block add_btn_inner"><span><i class="fa fa-plus add_plus" aria-hidden="true"></i></span>Add profile Summary</button>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12">
+                        <p class="langstyle">{{userDetails.summaryContent}}</p>
+                     </div>
+                  </div>
+               </div>
+               <label class="firstNameLabel">Skill set<span class="pencil_size_second" onclick="window.location.href='#/itskills/skillset'"> <i class="fa fa-pencil" aria-hidden="true"></i></span></label>
+               <div class="form-group">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 add_btn">
+                        <button ng-if="userDetails.skills.length < 1" type="button" onclick="window.location.href='#/itskills/skillset'" class="btn btn-lg btn-block add_btn_inner"><span><i class="fa fa-plus add_plus" aria-hidden="true"></i></span>Skill set</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="row langstyle">
+                     <div class="col-xs-4 col-sm-4 col-md-4">
+                        Skill Name
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3">
+                        Version
+                     </div>
+                     <div class="col-xs-2 col-sm-2 col-md-2">
+                        Years
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3">
+                        Months
+                     </div>
+                  </div>
+                  <div ng-repeat="s in userDetails.skills" class="row langstyle">
+                     <div class="col-xs-4 col-sm-4 col-md-4">
+                        {{s.tj_skill_names}}
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3">
+                        {{s.tj_skill_version}}
+                     </div>
+                     <div class="col-xs-2 col-sm-2 col-md-2">
+                        {{s.tj_skill_year}}
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3">
+                       {{s.tj_skill_month}}
+                     </div>
+                  </div>
+               </div>
+               <label class="firstNameLabel">Employment Details</label>
+               <div class="form-group">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 add_btn">
+                        <button type="button" onclick="window.location.href='#/site/workexperience'" class="btn btn-lg btn-block add_btn_inner"><span><i class="fa fa-plus add_plus" aria-hidden="true"></i></span>Employment Details</button>
+                     </div>
+                     <div ng-repeat="w in userDetails.workExperiance" class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="firstNameLabel">{{w.EmpName}}<span onclick="window.location.href='#/site/workexperience'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></div>
+                        <div class="projectstextStyle">{{w.duration}}</div>
+                        <div class="projectstextStyle">{{w.designation}}</div>
+                     </div>
+                  </div>
+               </div>
+               <label class="firstNameLabel">Projects</label>
+               <div class="form-group">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 add_btn">
+                        <button type="button" onclick="window.location.href='#/project/addProject'" class="btn btn-lg btn-block add_btn_inner"><span><i class="fa fa-plus add_plus" aria-hidden="true"></i></span>Projects</button>
+                     </div>
+                     <div ng-repeat="p in userDetails.user_projects" class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="firstNameLabel">{{p.tj_uprj_title}}<span onclick="window.location.href='#/project/addProject'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></div>
+                        <div class="projectstextStyle">{{p.tj_uprj_client}}({{(p.tj_uprj_location == 1) ? 'Onsite' : ((p.tj_uprj_location == 2)? 'Offsite' : ' ') }})</div>
+                        <div class="projectstextStyle">{{p.pRole}}({{p.employementTtype}})</div>
+                        <div class="projectstextStyle">{{p.tj_uprj_team_size}}</div>
+                     </div>
+                  </div>
+               </div>
+               <label class="firstNameLabel">Cover Letter</label>
+               <div class="form-group">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 add_btn">
+                        <button ng-if="userDetails.coverLetters.length < 1" type="button" onclick="window.location.href='#/coverletter/createcoverletter'" class="btn btn-lg btn-block add_btn_inner"><span><i class="fa fa-plus add_plus" aria-hidden="true"></i></span>Cover Letter</button>
+                     </div>
+                     <div ng-repeat="x in userDetails.coverLetters" class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="firstNameLabel">{{x.tj_cover_letter_name}}<span  class="pencil_size_second"> <a href='#/coverletter/createcoverletter?id={{x.tj_cover_letter_id}}'><i class="fa fa-pencil" aria-hidden="true"></i></a></span></div>
+                        <div class="projectstextStyle">{{x.tj_cover_letter_content}}</div>
+                     </div>
+                  </div>
+               </div>
+               <label class="firstNameLabel">Education</label>
+               <div class="form-group">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 add_btn">
+                        <button type="button" onclick="window.location.href='#/site/educationlink'" class="btn btn-lg btn-block add_btn_inner"><span><i class="fa fa-plus add_plus" aria-hidden="true"></i></span>Education</button>
+                     </div>
+                     <div ng-repeat="e in userDetails.userQualification" class="col-xs-12 col-sm-12 col-md-12">
+                        <div class="firstNameLabel">{{e.specialisation}}<span onclick="window.location.href='#/site/educationlink'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></div>
+                        <div class="projectstextStyle">{{e.universityName}}</div>
+                        <div class="projectstextStyle">{{e.year}}</div>
+                        <div class="projectstextStyle">{{e.specialisation}} CGPA/%: {{e.grade}}</div>
+                     </div>
+                  </div>
+               </div>
+               <label class="firstNameLabel">Snapshot<span onclick="window.location.href='#/site/snapshot'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></label>
+               <table class="table marg-top">
+                  <tbody>
+                     <tr>
+                        <td>Current Designation</td>
+                        <td>{{userDetails.userDesignation}}</td>
+                     </tr>
+                     <tr>
+                        <td>Current Company</td>
+                        <td>{{userDetails.employerName}}</td>
+                     </tr>
+                     <tr>
+                        <td>Current Location</td>
+                        <td>{{userDetails.userLocation}}</td>
+                     </tr>
+                     <tr>
+                        <td>Preferred Location</td>
+                        <td>{{userDetails.userPreferedLocation}}</td>
+                     </tr>
+                     <tr>
+                        <td>Industry</td>
+                        <td>{{userDetails.userIndustry}}</td>
+                     </tr>
+                     <tr>
+                        <td>Functional Area</td>
+                        <td>{{userDetails.jobCategory}}</td>
+                     </tr>
+                     <tr>
+                        <td>Role</td>
+                        <td>{{userDetails.userRole}}</td>
+                     </tr>
+                     <tr>
+                        <td>Date of Birth</td>
+                        <td>{{userDetails.dob}}</td>
+                     </tr>
+                     <tr>
+                        <td>Gender</td>
+                        <td>{{userDetails.gender}}</td>
+                     </tr>
+                     <tr>
+                        <td>Key Skills</td>
+                        <td>{{userDetails.userKeyskills}}</td>
+                     </tr>
+                     <tr>
+                        <td>Total Experience</td>
+                        <td>{{userDetails.experience}}</td>
+                     </tr>
+                     <tr>
+                        <td>Annual</td>
+                        <td>{{userDetails.userSalary}}</td>
+                     </tr>
+                     <tr>
+                        <td>Highest Degree</td>
+                        <td>{{userDetails.userEducation}}</td>
+                     </tr>
+                     <tr>
+                        <td>Phone</td>
+                        <td>{{userDetails.phone}}</td>
+                     </tr>
+                     <tr>
+                        <td>Email</td>
+                        <td>{{userDetails.emial}}</td>
+                     </tr>
+                     <tr>
+                        <td>Permanent Address</td>
+                        <td>{{userDetails.userAddress}}</td>
+                     </tr>
+                     <tr>
+                        <td>Marital Status</td>
+                        <td>{{userDetails.maritalStatus}}</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <label class="firstNameLabel">Contact Details<span onclick="window.location.href='#/site/contactDetails'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></label>
+               <table class="table marg-top">
+                  <tbody>
+                     <tr>
+                        <td>Name</td>
+                        <td>{{userDetails.userName}}</td>
+                     </tr>
+                     <tr>
+                        <td>Address</td>
+                        <td>{{userDetails.userAddress}}</td>
+                     </tr>
+                     <tr>
+                        <td>Email</td>
+                        <td>{{userDetails.emial}}</td>
+                     </tr>
+                     <tr>
+                        <td>Current Location</td>
+                        <td>{{userDetails.userLocation}}</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <label class="firstNameLabel">Affirmative Information<span onclick="window.location.href='#/moredetails/more_details'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></label>
+               <table class="table marg-top">
+                  <tbody>
+                     <tr>
+                        <td>Category</td>
+                        <td>{{userDetails.Category}}</td>
+                     </tr>
+                     <tr>
+                        <td>Physically Challenged</td>
+                        <td>{{userDetails.physicallyChallenged}}</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <label class="firstNameLabel">Desired Job Information<span onclick="window.location.href='#/moredetails/more_details'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></label>
+               <table class="table marg-top">
+                  <tbody>
+                     <tr>
+                        <td>Job Type:</td>
+                        <td>{{userDetails.jobType}}</td>
+                     </tr>
+                     <tr>
+                        <td>Employment Type:</td>
+                        <td>{{userDetails.employmentType}}</td>
+                     </tr>
+                  </tbody>
+               </table>
+               <label class="firstNameLabel">Languages Known<span onclick="window.location.href='#/moredetails/more_details'" class="pencil_size_second"> <i class="fa fa-pencil" aria-hidden="true"></i></span></label>
+               <div class="form-group">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 add_btn">
+                        <button ng-if="$status = userDetails.KnownLanguages.length < 1" type="button" onclick="window.location.href='#/moredetails/more_details'" class="btn btn-lg btn-block add_btn_inner"><span><i class="fa fa-plus add_plus" aria-hidden="true"></i></span>Add Languages</button>
+                     </div>
+                  </div>
+               </div>
+               <div ng-hide="$status" class="form-group">
+                  <div class="row langstyle">
+                     <div class="col-xs-3 col-sm-3 col-md-3">
+                        Language
+                     </div>
+                     <div class="col-xs-2 col-sm-2 col-md-2">
+                        Read
+                     </div>
+                     <div class="col-xs-2 col-sm-2 col-md-2">
+                        Write
+                     </div>
+                     <div class="col-xs-2 col-sm-2 col-md-2">
+                        Speak
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3">
+                        Proficiency
+                     </div>
+                  </div>
+                  <div ng-repeat="x in userDetails.KnownLanguages" class="row langstyle">
+                     <div class="col-xs-3 col-sm-3 col-md-3">
+                        {{x.lName}}
+                     </div>
+                     <div class="col-xs-2 col-sm-2 col-md-2 aligncenter">
+                        <i class="fa fa-check checkstyle"></i>
+                     </div>
+                     <div class="col-xs-2 col-sm-2 col-md-2 aligncenter">
+                        <i class="fa fa-check checkstyle"></i>
+                     </div>
+                     <div class="col-xs-2 col-sm-2 col-md-2 aligncenter">
+                        <i class="fa fa-check checkstyle"></i>
+                     </div>
+                     <div class="col-xs-3 col-sm-3 col-md-3">
+                        {{x.proficiency}}
+                     </div>
+                  </div>
+               </div>
+               <label class="firstNameLabel">Attached CV</label>
+               <div class="form-group">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-12 add_btn">
+					     <input type="file" class="upload"  name="files" id="files">
+                        <button type="button" class="btn btn-lg btn-block add_btn_inner" ng-click="uploadResume()"><span><i class="fa fa-plus add_plus" aria-hidden="true"></i></span>Attached Your Resume</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
+

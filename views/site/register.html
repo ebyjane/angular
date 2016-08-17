@@ -1,0 +1,77 @@
+<link href="assets/css/register.css" rel="stylesheet" property="stylesheet" type="text/css">
+	
+
+<div id="holder">
+<div class="registerbtn">
+<div class="register1">
+<span>
+<a href="" ng-click="closepage()"><img  alt="previous" id="previous" src="assets/images/previous.png"/></a>
+Register
+<a href="" ng-click="closepage()"><img  id="close" alt="close" src="assets/images/close.png"/></a>
+</span>
+</div>
+</div>
+
+
+<div class="createprofile">
+<div class="col-xs-12 col-sm-12 col-md-12 createprofile1">
+<span>Create Your Profile</span>
+</div>
+</div>
+<div class="container" id="test">
+<div class="firstname">
+<div class="col-xs-12 col-sm-12 col-md-12 align">
+<div class="firstNameLabel">Your First Name</div>
+<img class="user" alt="user" src="assets/images/user.png"/>
+<input type="text"  placeholder="Enter Your First Name" class="firstnamefield" required>
+</div>
+</div>
+
+<div class="firstname">
+<div class="col-xs-12 col-sm-12 col-md-12 align">
+<div class="firstNameLabel">Your Last Name</div>
+<img class="user" alt="user" src="assets/images/user.png"/>
+<input type="text"  placeholder="Enter Your Last Name" class="lastnamefield" required>
+</div>
+</div>
+
+<div class="firstname">
+<div class="col-xs-12 col-sm-12 col-md-12 align">
+<div class="firstNameLabel">Your Email Address</div>
+<img class="user" alt="email" src="assets/images/email.png"/>
+<input type="text"  placeholder="Enter Your Email Address" class="emailfield" required>
+</div>
+</div>
+
+<div class="firstname">
+<div class="col-xs-12 col-sm-12 col-md-12 align">
+<div class="firstNameLabel">Your Mobile Number</div>
+<img class="user" alt="mobile" src="assets/images/mobile.png"/>
+<input type="text" maxlength="10" placeholder="Enter Your Mobile Number" class="mobnofield" required>
+</div>
+</div>
+
+<div class="firstname">
+<div class="col-xs-12 col-sm-12 col-md-12 align">
+<div class="firstNameLabel">Resume</div>
+<img class="user" alt="upload" src="assets/images/upload.png"/>
+<input id="uploadFile" class="resumefield"  disabled="disabled" />
+<div class="fileUpload btn setwidth">
+    <span>Upload CV</span>
+    <input type="file" class="upload" />
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 align2">Upload Microsoft word,Pdf or Txt file upto 200kb</div>
+
+
+<p ><input type="checkbox" id="checkbox"><span class="textcolor5">I agree to </span><a href="#/site/termsAndConditions" class="textcolor4">Term & Condition</a></p>
+
+
+</div>
+<div class="next">
+<button type="button" class="btn btn-lg btn-block next2" onclick="window.location.href='#/site/otpVerification'">Next</button>
+</div>
+</div>
+<script src="assets/js/register.js"></script>

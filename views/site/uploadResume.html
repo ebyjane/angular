@@ -1,0 +1,49 @@
+
+<div class="uploadresume">
+<!-- <div class="verifyNo">
+<div class="verifyNo1">
+<span><a href="" ng-click="closepage()"><i class="fa fa-angle-left" id="previous" aria-hidden="true"></i></a>
+Upload Resume<a href="" ng-click="closepage()"><i class="fa fa-times-circle-o" aria-hidden="true" id="close"></i></a></span>
+</div>
+</div> -->
+<div class="header">
+<div class="header1">
+<span><a href="" ng-click="closepage()"><i class="fa fa-angle-left" id="previous" aria-hidden="true"></i></a>
+Upload Resume
+<a href="" ng-click="closepage()"><i class="fa fa-times-circle-o" aria-hidden="true" id="close"></i></a></span>
+</div>
+</div>
+<div id="test">
+ 					<div ng-show="showMsg" class="{{alert_class}}">
+                        <a href="" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        {{success_or_error}}
+                    </div>
+<div class="responsive-circle nyc-circle">
+    <div class="circle-inner">
+	<div class="col-xs-12 col-sm-12 col-md-12 doctype">
+      Resume <br> .pdf .doc .txt
+    </div>
+	<img id="close" alt="close" src="https://takeajob.s3.amazonaws.com/assets/app-images/resume.png"/>
+	<div class="col-xs-12 col-sm-12 col-md-12 sizetext">
+      Download <br>200Kb
+    </div>
+	</div>
+</div>
+
+
+<div class="col-xs-12 col-sm-12 col-md-12 mobNumber">
+ <input type="file" class="upload"  name="files" id="files">
+<button class="btn btn-lg btn-block mobNumber2" ng-click="uploadResume()">Upload Your Resume</button>
+</div>
+<!-- <div class="col-xs-12 col-sm-12 col-md-12 remove">
+<button type="button" class="btn btn-lg btn-block remove2"><i class="fa fa-trash trashicon" aria-hidden="true"></i>Remove</button>
+</div> -->
+
+<div class="col-xs-12 col-sm-12 col-md-12 misscalltext">
+This will remove Resume Permanently
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 misscalltext">
+Upload microsoft word, pdf or txt file upto 200Kb
+</div>
+</div>
+</div>

@@ -1,0 +1,42 @@
+
+<div style="width:100%;float:left;" ng-swipe-left="goToSaveJobs()" ng-swipe-right="goTorecommended()"> 
+<div id="holder" class="customalerts">
+<div class="jobs">
+<div class="col-xs-12 col-sm-12 col-md-12 jobs1">
+<span>
+<a href="" ng-click="closepage()"><i class="fa fa-angle-left" id="previous" aria-hidden="true"></i></a>
+Jobs for You
+<a href="" ng-click="closepage()"><i class="fa fa-times-circle-o" aria-hidden="true" id="close"></i></a>
+</span>
+</div>
+</div>
+
+<div class="savecustombtn">
+<div class="col-xs-4 col-sm-4 col-md-4 savenew removepad">
+<button type="button" class="btn savebtn" onclick="window.location.href='#/site/save'">Save</button>
+</div>
+<div class="col-xs-4 col-sm-4 col-md-4 recommended removepad">
+<button type="button" class="btn Recommendedbtn" onclick="window.location.href='#/site/recommended'">Recommended</button>
+</div>
+<div class="col-xs-4 col-sm-4 col-md-4 alerts removepad">
+<button type="button" class="btn alertsbtn">Custom Alerts</button>
+</div>
+</div>
+
+<div id="test">
+<div class="responsive-circle nyc-circle">
+    <div class="circle-inner"><img id="nojobs" alt="close" src="https://takeajob.s3.amazonaws.com/assets/app-images/app-nojobs.png"/></div>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 nojobs">No Jobs found</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 newAlerts">
+<button type="button" class="btn btn-lg btn-block newAlerts2">Set New Alerts</button>
+</div>
+
+</div>
+<div class="apply">
+<button type="button" class="btn btn-lg btn-block apply2">Apply</button>
+</div>
+</div>
+</div>

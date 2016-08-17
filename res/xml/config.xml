@@ -1,0 +1,11 @@
+<widget version="0.0.1">
+        <name>Ocean Groups App</name>
+        <description>
+            Let People find you Online
+        </description>
+        <author email="eby.jane@gmail.com" href="http://cordova.io">
+            Ocean Groups
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+    </widget>
